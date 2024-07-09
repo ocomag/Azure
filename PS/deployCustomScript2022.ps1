@@ -16,4 +16,5 @@ Expand-Archive -Path $zipFilePath -DestinationPath "C:\Service"
 Remove-Item -Path $zipFilePath
 
 # Ausführen der server_customization.cmd
-Start-Process -NoNewWindow -FilePath "C:\Service\Custom Server Script 2022\server_customization.cmd"
+#Start-Process -NoNewWindow -FilePath "C:\Service\Custom Server Script 2022\server_customization.cmd"
+Start-Process -FilePath "C:\Windows\System32\cmd.exe" -ArgumentList '/k "C:\Service\Custom Server Script 2022\server_customization.cmd"'
